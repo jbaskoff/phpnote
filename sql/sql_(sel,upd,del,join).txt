@@ -1,0 +1,83 @@
+SHOW DATABASES;
+SHOW TABLES;
+
+SHOW COLUMNS FROM customers;
+
+SELECT column_list
+FROM table_name;
+
+SELECT name, age from Customers;
+SELECT * from customers;
+
+multiple select
+SELECT name FROM customers;
+SELECT age FROM customers;
+
+DISTINCT and LIMIT keyword
+SELECT DISTINCT name FROM customers; -> unique records;
+SELECT name FROM customers LIMIT 5; -> 5 records from castomers table;
+SELECT name FROM customers LIMIT 5,10; -> show 10 records after 5 record from castomers table;
+
+
+sorting
+full names
+SELECT customers.name FROM customers;
+order by
+SELECT name FROM customers ORDER BY name;
+Sorting multiple
+SELECT name, age FROM customers ORDER BY name, age DESC; -> if same names will sort by age;
+
+joining tables
+SELECT customers.name, customers.age, orders.name, orders.age FROM customers, orders WHERE customers.ID = ORDERS.id ORDER BY customer.id;
+with custom name
+SELECT cs.id, cs.name, ord.mame, ord.amount FROM customers AS cs, order AS ord WHERE ct.id = ct.ord ORDER BY ct.id;
+inner join
+SELECT cs.id, cs.name, ord.mame, ord.amount FROM customers AS cs, order AS ord WHERE ct.id = ct.ord ORDER BY ct.id;
+left join
+SELECT t1.column1 t2.column1 FROM table1 as t1 LEFT OUTER JOIN table2 as t2 ON t1.id = t2.foreign_t1_id;
+left join
+SELECT t1.column1 t2.column1 FROM table1 as t1 RIGHT OUTER JOIN table2 as t2 ON t1.id = t2.foreign_t1_id;
+
+insert
+INSERT INTO table_name VALUES(value1,vaue2,...,valueN);
+INSERT INTO student VALUES(1,'john', 'master', 8);
+insert data
+INSERT INTO student(id,name,rang,old) VALUES (1,'john', 'master', 8), (1,'john', 'master', 8);
+
+Updating Data
+UPDATE table_name SET col1=val1, col2=val2 WHERE condition;
+UPDATE students SET name="john" WHERE ID=2;
+
+Deleting Data
+DELETE FROM table_name WHERE condition;
+DELETE FROM people WHERE id>5 and id<10;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
